@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Buscar cancion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="4" offset-md="4">
+        <!-- Ionic Card -->
+        <ion-card color="light">
+          <ion-card-header color="secondary">
+            <ion-card-title>
+              PlayList
+            </ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item margin-vertical>
+              <ion-label position="floating">Search Music</ion-label>
+              <ion-input type="text" id="productName"  [(ngModel)]="cancionBuscar" ></ion-input>
+            </ion-item>
+            
+            <div margin-vertical text-right>
+              <ion-button id="button-save" (click)="Buscar()">
+                <ion-icon name="add-circle" slot="start"></ion-icon>
+                Buscar
+              </ion-button>
+            </div>
+
+            <ion-item class="mt-4 text-center">
+              <h1>Cancion: {{name}}</h1>
+            </ion-item>
+            <ion-item>
+              <h4>Artista: {{artista}}</h4>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
